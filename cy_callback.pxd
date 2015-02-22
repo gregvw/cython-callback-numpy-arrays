@@ -2,10 +2,10 @@ import cython
 
 cdef extern from "callback.hpp":
     ctypedef double (*Callback)( void *apply,
-                                 double &x )
+                                 const double &x )
 
     void function( Callback callback, 
                    void *apply, 
-                   double *x,
+                   const double *x,
                    double *y,
                    int n )

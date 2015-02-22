@@ -14,6 +14,6 @@ def pyfun(f,np.ndarray[double,ndim=1,mode="c"] x not None,
     return None
     
 
-cdef double cb(void* f, double &x ):
+cdef double cb(void* f, const double &x ):
     return (<object>f)(x)
 

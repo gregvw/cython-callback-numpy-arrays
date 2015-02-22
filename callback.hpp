@@ -1,7 +1,7 @@
-typedef double (*Callback)( void *apply, double &x );
+typedef double (*Callback)( void *apply, const double &x );
 void function( Callback callback, 
                void *apply,
-               double *x,
+               const double *x,
                double *y,
                int n );
 
